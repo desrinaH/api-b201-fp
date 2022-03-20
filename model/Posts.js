@@ -17,11 +17,11 @@ const PostSchema = mongoose.Schema({
         kind: String,
         etag: String,
         id: String,
-        snippet: {
-         channelId: String,
-         title: String,
-         assignable: Boolean
-        }
+        channelId: String,
+        title: String,
+        assignable: Boolean,
+        //required: true
+    
     }]
 });
 
