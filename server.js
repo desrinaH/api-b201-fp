@@ -4,14 +4,18 @@ const mongoose = require ('mongoose');
 const bodyParser = require('body-parser');
 require('dotenv/config');
 
-app.use(bodyParser.json());
+
+app.use(express.json());
+
 
 //import route
 const postsRoute = require('./routes/posts');
-const userRoute = require('./routes/user');
+const authRoute = require('./routes/auth');
+
 
 app.use('/video', postsRoute);
-app.use('/user', userRoute);
+app.use('/api/user', authRoute);
+
 
 //Route
 app.get('/', (req, res) => {
